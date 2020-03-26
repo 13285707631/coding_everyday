@@ -37,4 +37,21 @@ public class listNode {
         return list;
     }
 
+    public ListNode ReverseList(ListNode head) {
+           //刚开始都需要判断一下是否为空的情况
+        if(head==null){
+            return null;
+        }
+        ListNode node=head.next;
+        head.next=null;//使用两个指针，node和nextNode，注意实时的更新
+        while(node!=null){
+            ListNode nextNode=node.next;
+            node.next=head;
+            head=node;
+            node=nextNode;
+        }
+        return head;
+            
+    }
+
 }
