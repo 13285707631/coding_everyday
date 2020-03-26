@@ -53,3 +53,33 @@ if(treeArray[i] != Integer.MIN_VALUE){
 森林：由m（m>=0）棵互不相交的树的集合称为森林；
 
 二叉树索引和其左右叶子节点的关系，，根节点K,左节点2K+1,右节点2K+2
+
+
+java的标准输入，使用Scanner，一行的输入使用nextline.
+
+public class Test {
+    public static  void main(String [] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input you name:");
+        String a = in.nextLine();
+        System.out.println("name = " + a);
+        a = in.nextLine(); // read until find the \n
+        System.out.println(a);
+    }
+}
+
+str.toString.replace（）函数的使用
+
+public class replace {
+    static   String replaceSpace(StringBuffer str){
+        return str.toString().replace(" ","%20");
+    }
+    public static void main(String [] arg){
+        Scanner in =new Scanner(System.in);
+        String a= in.nextLine();
+        System.out.println(a.toString().replace(" ","%10"));
+
+        StringBuffer b=new StringBuffer(a);
+        System.out.print(replaceSpace(b));
+    }
+}
