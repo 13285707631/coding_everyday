@@ -83,3 +83,28 @@ public class replace {
         System.out.print(replaceSpace(b));
     }
 }
+
+ArrayList.add(int index, value)
+   // use add() method to add elements in the list
+    arrlist.add(15);
+    arrlist.add(22);
+    arrlist.add(30);
+    arrlist.add(40);
+
+  // adding element 25 at third position
+    arrlist.add(2,25);
+    
+    让我们来编译和运行上面的程序，这将产生以下结果：
+Number = 15
+Number = 22
+Number = 25
+Number = 30
+Number = 40
+java.util.ArrayList.add(int index, E elemen) 方法将指定的元素E在此列表中的指定位置。它改变了目前元素在该位置(如果有的话)和所有后续元素向右移动(将添加一个到其索引)。
+
+
+
+
+
+
+
