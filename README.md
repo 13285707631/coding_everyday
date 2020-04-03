@@ -103,8 +103,3 @@ Number = 40
 java.util.ArrayList.add(int index, E elemen) 方法将指定的元素E在此列表中的指定位置。它改变了目前元素在该位置(如果有的话)和所有后续元素向右移动(将添加一个到其索引)。
 
 
-
-
-
-
-
