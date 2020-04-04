@@ -139,3 +139,33 @@ java.util.ArrayList.add(int index, E elemen) 方法将指定的元素E在此列
 
 以上就是有关进程和线程的总结，有什么好的意见欢迎大家留言。
 
+
+1.    加载
+
+加载，是指Java虚拟机查找字节流（查找.class文件），并且根据字节流创建java.lang.Class对象的过程。这个过程，将类的.class文件中的二进制数据读入内存，放在运行时区域的方法区内。然后在堆中创建java.lang.Class对象，用来封装类在方法区的数据结构。
+
+类加载阶段：
+
+（1）Java虚拟机将.class文件读入内存，并为之创建一个Class对象。
+
+（2）任何类被使用时系统都会为其创建一个且仅有一个Class对象。
+
+（3）这个Class对象描述了这个类创建出来的对象的所有信息，比如有哪些构造方法，都有哪些成员方法，都有哪些成员变量等。
+
+2.    链接
+
+链接包括验证、准备以及解析三个阶段。
+
+（1）验证阶段。主要的目的是确保被加载的类（.class文件的字节流）满足Java虚拟机规范，不会造成安全错误。
+
+（2）准备阶段。负责为类的静态成员分配内存，并设置默认初始值。
+
+（3）解析阶段。将类的二进制数据中的符号引用替换为直接引用
+
+
+
+Synchronized 保证⽅法内部或代码块内部资源（数据）的互斥访问。即同⼀时间、由同⼀个 Monitor（监视锁） 监视的代码，最多只能有⼀个线程在访问。
+
+
+4. Lock
+Lock 也是 java.util.concurrent 包下的一个接口，定义了一系列的锁操作方法。Lock 接口主要有 ReentrantLock，ReentrantReadWriteLock.ReadLock，ReentrantReadWriteLock.WriteLock 实现类。与 Synchronized 不同是 Lock 提供了获取锁和释
