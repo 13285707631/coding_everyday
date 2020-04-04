@@ -169,3 +169,17 @@ Synchronized 保证⽅法内部或代码块内部资源（数据）的互斥访�
 
 4. Lock
 Lock 也是 java.util.concurrent 包下的一个接口，定义了一系列的锁操作方法。Lock 接口主要有 ReentrantLock，ReentrantReadWriteLock.ReadLock，ReentrantReadWriteLock.WriteLock 实现类。与 Synchronized 不同是 Lock 提供了获取锁和释
+
+
+什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
+答案
+
+什么是序列化：在java中，把对象转换成字节序列的过程叫做序列化。
+把字节序列转换成对象的过程叫做反序列化。
+怎么序列化：在实现了Serializable接口的情况下，便可以序列化。
+为什么要序列化：
+1.为了我们在内存中的对象能够存储在硬盘文件或数据库需要序列化
+2.为了对象在网络中通过套接字进行传输。
+3.通过rmi传输对象时需要用到序列化
+反序列化会遇到什么问题。
+在我们实现了Serializable接口后，没有给serialVersionUID一个固定值。这时候会发生这种情况，当我们序列化之后，然后改变了类中的属性。然后再进行反序列化。这时候程序便会报错，原因在于我们序列化时候的serialVersionUID与我们反序列化时候的serialVersionUID不一致所导致的，这也是为什么我们在实现了Serializable接口后，不给serialVersionUID一个固定值，ide会给我们一个警告。因为我们没有给一个固定的值。系统会根据类的属性自动生成一个值，在我们改变了类中的属性后，这个值自然也会发生变化。
